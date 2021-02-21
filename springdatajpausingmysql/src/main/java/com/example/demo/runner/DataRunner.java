@@ -9,8 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
-import com.example.demo.model.Employee;
-import com.example.demo.model.Student;
+import com.example.demo.entity.Employee;
+import com.example.demo.entity.Student;
 import com.example.demo.repository.EmployeeRepository;
 import com.example.demo.repository.StudentRepository;
 
