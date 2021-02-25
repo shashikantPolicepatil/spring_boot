@@ -7,6 +7,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.entity.Employee;
@@ -19,6 +20,7 @@ import com.example.demo.repository.StudentRepository;
  *
  */
 @Component
+@Order(value = 1)
 public class DataRunner implements CommandLineRunner {
 
 	@Autowired

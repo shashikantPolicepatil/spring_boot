@@ -18,7 +18,7 @@ import lombok.ToString;
  * @author hp
  *
  */
-@Entity(name = "TB_EMP")
+@Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

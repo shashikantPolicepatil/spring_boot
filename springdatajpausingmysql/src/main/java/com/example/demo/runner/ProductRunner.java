@@ -20,8 +20,11 @@ import com.example.demo.repository.ProductRepository;
  * @author hp
  *
  */
-@Component
-@Order(value = 111)
+/*
+ * @Component
+ * 
+ * @Order(value = 111)
+ */
 public class ProductRunner implements CommandLineRunner {
 
 	
