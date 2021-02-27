@@ -36,6 +36,8 @@ public class Employee {
 	@Column(name = "fname")
 	private String fname;
 	
+	@Column(name="salary")
+	private Integer eSal;
 	
 	
 }
