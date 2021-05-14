@@ -1,0 +1,13 @@
+#menu-items{
+    text-align: right;
+    line-height: 40px;
+    background: yellowgreen;
+}
+
+#menu-items > a{
+    margin-right: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+}

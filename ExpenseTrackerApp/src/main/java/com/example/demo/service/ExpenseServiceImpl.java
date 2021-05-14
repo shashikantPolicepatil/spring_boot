@@ -39,6 +39,8 @@ public class ExpenseServiceImpl implements ExpenseService {
 			return Arrays.asList(expenseRepository.save(expense));
 		case GET_ALL:
 			return expenseRepository.findAll(Sort.by("expenseDate"));
+		case DELETE:
+			expenseRepository.deleteById(expense.getId());
 		default:
 			expenseRepository.findAll();
 		}

@@ -5,6 +5,8 @@ const ADD_CATEGORY="/category/addCategory";
 const GET_CATEGORIES="/category/loadCategories";
 
 const ADD_EXPENSE = "/expense/addExpense";
+const GET_EXPENSES = "/expense/loadAllExpense";
+const DEL_EXPENSE = "/expense/remove/"
 
 class HTTPServiceImpl {
    
@@ -22,6 +24,14 @@ class HTTPServiceImpl {
         return axios.post(APP_BASE_URL+ADD_EXPENSE,expense,{
             headers:headers,
         });
+    }
+
+    removeExpense(id) {
+        return axios.delete(APP_BASE_URL+DEL_EXPENSE+id);
+    }
+
+    getExpenseList() {
+        return axios.get(APP_BASE_URL+GET_EXPENSES);
     }
 }
 
