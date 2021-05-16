@@ -4,15 +4,18 @@
 package com.example.demo.resource;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.ExpenseCategory;
@@ -67,8 +70,10 @@ public class CategoryResourse {
 	}
 	
 	@GetMapping("/loadCategories")
-	public ResponseEntity<List<ExpenseCategory>> loadCategories() {
-		List<ExpenseCategory> list = categoryService.doCategoryOpr(null, CategoryService.GET_ALL);
+	public ResponseEntity<List<ExpenseCategory>> loadCategories(@RequestParam(required = false,
+																				defaultValue = "1") Integer page ) {
+		List<ExpenseCategory> list = categoryService.doCategoryOpr(new ExpenseCategory(page,null,null), CategoryService.GET_ALL);
+		//Map<String, Object> allCategory = categoryService.getAllCategory(new ExpenseCategory(page, null, null));
 		return new ResponseEntity<List<ExpenseCategory>>(list, HttpStatus.OK);
 	}
 }

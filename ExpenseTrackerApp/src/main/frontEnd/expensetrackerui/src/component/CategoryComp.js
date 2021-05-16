@@ -81,6 +81,7 @@ class CategoryComp extends Component {
         });
     }
     render() {
+        
         return (
             <div>
                 <CategoryList categoryList={this.state.categoryList} 

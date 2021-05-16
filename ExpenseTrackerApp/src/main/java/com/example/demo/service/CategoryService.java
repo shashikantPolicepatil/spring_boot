@@ -4,6 +4,7 @@
 package com.example.demo.service;
 
 import java.util.List;
+import java.util.Map;
 
 import com.example.demo.entity.ExpenseCategory;
 
@@ -19,4 +20,6 @@ public interface CategoryService {
 	public final static String GET_ALL="GELL_ALL";
 	
 	public List<ExpenseCategory> doCategoryOpr(ExpenseCategory expenseCategory,String actionName);
+
+	public Map<String, Object> getAllCategory(ExpenseCategory expenseCategory);
 }

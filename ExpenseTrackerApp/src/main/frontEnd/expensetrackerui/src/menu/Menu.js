@@ -8,6 +8,7 @@ import {HashRouter,Route} from 'react-router-dom';
 const Home = lazy(()=> import('../component/Home'));
 const CategoryComp = lazy(()=> import('../component/CategoryComp'));
 const ExpenseComp = lazy(()=> import('../component/ExpenseComp'));
+const IncomeComp = lazy(()=> import('../component/IncomeComp'));
 
 class Menu extends Component {
     render() {
@@ -17,6 +18,7 @@ class Menu extends Component {
                 <a href="#/home">Home</a>
                 <a href="#/category">Category</a>
                 <a href="#/expense">Expense</a>
+                <a href="#/income">Income</a>
             </div>
             <Suspense fallback="Loading...">
             <HashRouter>
@@ -25,6 +27,7 @@ class Menu extends Component {
                     <Route path="/home" exact component={Home}/>
                     <Route path="/category" exact component={CategoryComp}/>
                     <Route path="/expense" exact component={ExpenseComp}/>
+                    <Route path="/income" exact component={IncomeComp}/>
                 </div>
             </HashRouter> 
             </Suspense>               

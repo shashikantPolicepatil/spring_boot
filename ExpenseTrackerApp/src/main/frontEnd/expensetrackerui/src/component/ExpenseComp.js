@@ -109,21 +109,20 @@ class ExpenseComp extends Component {
         })
     }
     render() {
-        const{categoryList} = this.state;
       
         return (
-            <div>
+            <div className="transactions transactions-expense">
                 <ExpenseList title= {this.state.expenseList.length>0?'Expense List' : 'No data'}
                 expenseList={this.state.expenseList}
                 handleEdit={this.handleEdit} handleDelete={this.handleDelete}
                 statusMessage={this.state.statusMessage}/>
 
                 <AddExpense title='Add expense'
-                categoryList={categoryList}
+                categoryList={this.state.categoryList}
                 expense={this.state.expense}
                 handleChange={this.handleChange}
                 handleCatChange={this.handleCatChange}
-                addExpense={this.addExpense}></AddExpense>
+        addExpense={this.addExpense}></AddExpense>
 
                 
             </div>

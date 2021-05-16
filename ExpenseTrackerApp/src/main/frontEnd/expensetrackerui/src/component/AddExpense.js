@@ -5,7 +5,7 @@ import CategoryList from './CategoryList';
 class AddExpense extends Component {
     
     render() {
-        const{categoryList} = this.props.categoryList;
+      //  const{categoryList} = this.props.categoryList.cateList;
        const catList =  this.props.categoryList.map((category,i)=>{
            return <option value={category.id}>{category.categoryDesc}</option>
         })

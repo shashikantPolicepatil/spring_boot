@@ -6,17 +6,20 @@ import ExpenseComp from './component/ExpenseComp';
 import Header from './component/Header';
 import Footer from './component/Footer';
 import Menu from './menu/Menu';
+//import "./App.css";
 
 import React, { Component } from 'react';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div >
+      
         <Header/>
         <Menu/>
         <Footer/>
       </div>
+      
     );
   }
 }
