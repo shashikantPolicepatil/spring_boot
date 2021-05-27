@@ -86,6 +86,10 @@ class IncomeComp extends Component {
         });
     }
 
+    handleEdit=(id)=>{
+        console.log('income id '+id);
+    }
+
     handleDelete=(id)=>{
         HTTPServiceImpl.removeIncome(id)
         .then((response)=>{
@@ -104,7 +108,8 @@ class IncomeComp extends Component {
 
                 <IncomeList title={this.state.incomeList.length>0?'Amount credit details..':'No credit info.'}
                 incomeList={this.state.incomeList}
-                handleDelete={this.handleDelete}/>
+                handleDelete={this.handleDelete}
+                handleEdit={this.handleEdit}/>
                 <p>{this.state.statusMessage}</p>
 
                  <AddIncome title='Add income'

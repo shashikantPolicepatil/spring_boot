@@ -12,6 +12,8 @@ const ADD_INCOME = "/income/addIncome";
 const DEL_INCOME = "/income/remove/";
 const GET_INCOME = "/income/loadAllIncome";
 
+const DASHBOARD_URL = "/dashboarddata/"
+
 class HTTPServiceImpl {
    
     addCategory(category,headers){
@@ -50,6 +52,10 @@ class HTTPServiceImpl {
 
     getIncomeList() {
         return axios.get(APP_BASE_URL+GET_INCOME);
+    }
+
+    getDashBoardData(month) {
+        return axios.get(APP_BASE_URL+DASHBOARD_URL+month);
     }
 }
 

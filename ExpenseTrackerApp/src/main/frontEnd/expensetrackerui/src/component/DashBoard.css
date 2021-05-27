@@ -1,0 +1,28 @@
+.dashboardContainer{
+    position: fixed;
+   /** left: 400px;**/
+    background-color: #d4d7dc;
+    width: 100%;
+}
+
+.nav, .section {
+    float: left; 
+    padding: 20px;
+    min-height: 170px;
+    box-sizing: border-box;
+}
+.nav {            
+  /*  width: 20%;             */
+    background: #d4d7dc;
+}
+.section {
+   /** width: 80%;**/
+}
+
+.expenseByCate{
+    
+    position: relative;
+    padding-top: 20%;
+    height: fit-content;
+    width: 150%;
+}

@@ -25,5 +25,16 @@ public class ExpenseUtility {
 		List<String> monthList = Arrays.asList("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec");
 		return monthList.get(index);
 	}
+	
+	public static Date getDateByMonth(int month) {
+		Calendar instance = Calendar.getInstance();
+		instance.set(Calendar.MONTH, month-1);
+		instance.set(Calendar.DAY_OF_MONTH,1);
+		return instance.getTime();
+	}
+	
+	public static void main(String[] a) {
+		getDateByMonth(4);
+	}
 
 }
